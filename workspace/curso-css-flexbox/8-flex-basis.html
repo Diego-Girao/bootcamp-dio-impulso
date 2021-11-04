@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex basis</title>
+    
+    <style>
+
+        body{
+            background-color: #35363A;
+            font-family: monospace;
+        }
+
+        p {
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            max-width: 500px;
+            border: 2px dotted whitesmoke;
+        }
+
+        .item {
+            background-color: springgreen;
+            color: black;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .bauto {
+            flex-basis: auto;
+        }
+        .bzero {
+            flex-basis: 0;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+        .fg-2 {
+            flex-grow: 2;
+        }
+
+        .w100 {
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>flex-basis: auto</p>
+    <div class="flex-container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-1">BBB</div>
+        <div class="item bauto fg-1">CD</div>
+        <div class="item bauto fg-2">EFGH</div>
+    </div>
+   
+    <p>flex-basis: 0 [zero]</p>
+    <div class="flex-container">
+        <div class="item bzero fg-1">A</div>
+        <div class="item bzero fg-1">BBB</div>
+        <div class="item bzero fg-1">CD</div>
+        <div class="item bzero fg-1">EFGH</div>
+    </div>
+    
+    <p>flex-basis + width</p>
+    <div class="flex-container">
+        <div class="item w100 fg-2">A</div>
+        <div class="item w100 fg-2">BBB</div>
+        <div class="item w100 fg-2">CD</div>
+        <div class="item w100 fg-2">EFGH</div>
+        <div class="item w100 fg-2">IJ</div>
+        <div class="item w100 fg-2">KLMN</div>
+        <div class="item w100 fg-2">OPQRSTUV</div>
+    </div>
+</body>
+</html>
